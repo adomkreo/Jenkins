@@ -1,0 +1,13 @@
+# PVC
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pv-claim
+spec:
+  storageClassName: jenkins
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+~                       
