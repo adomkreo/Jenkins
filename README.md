@@ -34,3 +34,7 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 echo "echo of jenkins installation"
 sudo su - ec2-user
+# Install kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl" 
+sudo chmod +x ./kubectl 
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl 
